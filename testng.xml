@@ -4,6 +4,9 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="m_jk.mvjek.firsttest"/>
+      <class name="m_jk.mvjek.second_Test"/>
+	  <class name="m_jk.mvjek.thirdtest"/>
+	  <class name="m_jk.mvjek.forthtest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
