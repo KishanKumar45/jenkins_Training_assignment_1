@@ -10,7 +10,7 @@ pipeline {
 
             stage('Running the Test') {
                 steps {
-                bat label:'',script:'mvn -v'
+                bat label:'',script:'mvn clean test'
                 }
             }
     }
