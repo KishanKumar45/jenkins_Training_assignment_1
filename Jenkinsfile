@@ -1,14 +1,28 @@
 pipeline {
     agent any
-     stage('Running the Test') {
+    tools{
+        maven "MVN_HO"
+    }
+    stages{
+            stage('Stage-1 Checkout code') {
                 steps {
-                bat label:'',script:'mvn -version'
+                git 'https://github.com/KishanKumar45/jenkins_Training_assignment_1'
                 }
             }
-            stage('Running the Test') {
+             stage('Stage-2 compile code') {
                 steps {
-                bat label:'',script:'mvn clean test'
+                bat "mvn compile"
+                }
+            }
+            stage('Stage-3 run Test Cases') {
+                steps {
+                bat "mvn test"
+                }
+            }
+            stage('Stage-4 -Create Build') {
+                steps {
+                bat "mvn package"
                 }
             }
     }
-}
+ }
