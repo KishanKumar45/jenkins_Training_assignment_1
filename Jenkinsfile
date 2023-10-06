@@ -6,7 +6,7 @@ pipeline {
     stages{
             stage('Stage-1 Checkout code') {
                 steps {
-                git 'https://github.com/KishanKumar45/jenkins_Training_assignment_1'
+               git branch: 'main', changelog: false, poll: false, url: 'https://github.com/KishanKumar45/jenkins_Training_assignment_1'
                 }
             }
              stage('Stage-2 compile code') {
